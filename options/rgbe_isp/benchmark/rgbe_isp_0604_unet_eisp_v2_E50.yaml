@@ -1,0 +1,50 @@
+JOBS: 12
+TEST_ONLY: false
+LOG_INTERVAL: 10
+TRAIN_BATCH_SIZE: 1
+VAL_BATCH_SIZE: 1
+START_EPOCH: 0
+END_EPOCH: 50
+VAL_INTERVAL: 1
+MODEL_SANING_INTERVAL: 5
+MIX_PRECISION: false
+RESUME:
+  PATH: null
+  TYPE: null
+  SET_EPOCH: true
+LAUNCHER: ParallelLaunch
+SEED: 9527
+IS_CUDA: true
+OPTIMIZER:
+  NAME: Adam
+  LR: 0.0001
+  LR_SCHEDULER: cosine
+  end_epoch: 50
+LOSS:
+  - NAME: rgbe_isp-charbonnier
+    WEIGHT: 1
+METRICS:
+  - NAME: rgbe_isp-PSNR
+  - NAME: rgbe_isp-SSIM
+  - NAME: rgbe_isp-l1
+DATASET:
+  NAME: get_alpx_rgbe_isp_dataset
+  alpx_rgbe_isp_root: "dataset/5-APLEX/GoodRGB-Release/"
+  moments: 100
+  in_frame: 3
+  future_frame: 1
+  past_frame: 1
+  random_crop_resolution:
+    - 1024
+    - 1024
+  using_events: true
+  using_interpolate: false
+  evaluation_visualization: false
+MODEL:
+  NAME: RGBEventISPUNet
+  in_channels: 12
+  moments: 100
+VISUALIZATION:
+  folder: ./adobe240fps
+  tag: 0821
+  intermediate_visualization: false

@@ -17,9 +17,6 @@ Welcome to the **RGB-Event ISP Benchmark**! 🌈✨ This toolkit provides a comp
   - **Resource Consumption**: Params (M), GFLOPS, Inference Time ⏱️
   - **Image Quality**: PSNR / SSIM / L1 for indoor & outdoor scenes 🏞️🏠
 
-- **Pixel-Aligned Dataset** 📸
-  Includes **3,373 high-res RAW-event pairs** with HVS sensor alignment (see [paper](https://arxiv.org/abs/xxx) for details)!
-
 ---
 
 ## 🚀 Quick Start

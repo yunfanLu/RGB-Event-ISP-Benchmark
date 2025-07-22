@@ -63,18 +63,7 @@ python ev_rgb_isp/main.py \
 
 ---
 
-## 📊 Key Findings
 
-### Outdoor vs Indoor Performance 🌆🏠
-| Model       | Outdoor PSNR ↑ | Indoor PSNR ↑ | GFLOPS ↓ |
-|-------------|----------------|---------------|----------|
-| **PyNet**   | 32.47 🥇       | 28.91         | 141.2G   |
-| **EV-UNet** | 30.11 (+1.94✨)| 25.67         | 12.3G    |
-| **AWNet**   | 29.85          | 31.02 🥇      | 103.7G   |
-
-*🔍 Insight:* Event fusion boosts outdoor performance but struggles with indoor lighting flicker 💡→⚡!
-
----
 
 ## 🎨 Visualization
 ![Outdoor Results](images/R2-Outdoor.jpg)
